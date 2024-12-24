@@ -1,0 +1,49 @@
+{
+    "steps": [
+        {
+            "step_type": "code_process_supervision_lbpp",
+            "step_name": "ORPS+T_lbpp",
+            "output_path": "./output",
+            "dataset_type": "lbpp",
+            "dataset_path": "./datasets/lbpp",
+            "save_predictions": true,
+            "data_group_tuple": [
+                8,
+                0
+            ],
+            "run_dataset_split": "test",
+            "test_dataset_split": "test",
+            "save_analysis": true,
+            "inference_max_retries": 5,
+            "num_samples": 20,
+            "num_rounds": 5,
+            "topk": 3,
+            "if_select_lbpp": false,
+            "select_best_node_method": "success_ratio-time_enabled_ns",
+            "inference_config": {
+                "type": "remote_hf",
+                "inference_kwargs": {
+                    "model_name": "your_model_name",
+                    "base_url": [
+                        "http://your_base_url"
+                    ],
+                    "num_workers": 8,
+                    "trial_run": false,
+                    "dump_individual_rsp": true,
+                    "timeout": 60,
+                    "num_retries": 10,
+                    "max_concurrency": 1,
+                    "generation_config": {
+                        "max_new_tokens": 1500,
+                        "temperature": 0.5,
+                        "do_sample": true
+                    }
+                },
+                "prompt_postprocessor_config": {
+                    "tokenizer_name_or_path": "your_tokenizer_name_or_path",
+                    "add_generation_prompt": true
+                }
+            }
+        }
+    ]
+}
