@@ -1,6 +1,4 @@
-# Outcome-Refining Process Supervision for Code Generation
-
-This repository contains the implementation code for the paper "Outcome-Refining Process Supervision for Code Generation".
+# Reasoning Through Execution: Unifying Process and Outcome Rewards for Code Generation
 
 ## Environment Setup
 
