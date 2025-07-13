@@ -1,6 +1,6 @@
-# Outcome-Refining Process Supervision for Code Generation
+# Reasoning Through Execution: Unifying Process and Outcome Rewards for Code Generation
 
-This repository contains the implementation code for the paper "Outcome-Refining Process Supervision for Code Generation".
+This repository contains the implementation code for the paper "Reasoning Through Execution: Unifying Process and Outcome Rewards for Code Generation" (ICML 2025).
 
 ## Environment Setup
 
@@ -174,3 +174,16 @@ Parameters:
 - `select_method`: Strategy for selecting best solutions. **Important**: This must match the `select_best_node_method` specified in your configuration file. For example, if your config uses `"select_best_node_method": "success_ratio-time_enabled_ns"`, you must use the same value here.
 - `standard_metrics_path`: Path to standard metrics calculated in Step 1
 - `result_path`: Where to save the final results
+
+## Citation
+
+If you find our work helpful, please consider citing:
+
+```bibtex
+@article{yu2024reasoning,
+  title={Reasoning Through Execution: Unifying Process and Outcome Rewards for Code Generation},
+  author={Yu, Zhuohao and Gu, Weizheng and Wang, Yidong and Jiang, Xingru and Zeng, Zhengran and Wang, Jindong and Ye, Wei and Zhang, Shikun},
+  journal={arXiv preprint arXiv:2412.15118},
+  year={2024}
+}
+```
