@@ -42,31 +42,27 @@ description: "ORPS: Reasoning Through Execution: Unifying Process and Outcome Re
             <div class="space-y-3">
                 <!-- First line of authors -->
                 <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
-                    <span>Zhuohao Yu<sup>1,§</sup></span>
-                    <span>Jiali Zeng<sup>2</sup></span>
+                    <span>Zhuohao Yu<sup>1</sup></span>
                     <span>Weizheng Gu<sup>1</sup></span>
                     <span>Yidong Wang<sup>1</sup></span>
-                    <span>Jindong Wang<sup>3</sup></span>
+                    <span>Xingru Jiang<sup>1</sup></span>
                 </div>
                 <!-- Second line of authors -->
                 <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
-                    <span>Fandong Meng<sup>2</sup></span>
-                    <span>Jie Zhou<sup>2</sup></span>
-                    <span>Yue Zhang<sup>4</sup></span>
-                    <span>Shikun Zhang<sup>1</sup></span>
+                    <span>Zhengran Zeng<sup>1</sup></span>
+                    <span>Jindong Wang<sup>2</sup></span>
                     <span>Wei Ye<sup>1,†</sup></span>
+                    <span>Shikun Zhang<sup>1</sup></span>
                 </div>
             </div>
         </div>
         <div class="text-base md:text-lg text-gray-600">
             <div class="mb-4 font-bold">
                 <sup>1</sup>Peking University &emsp;
-                <sup>2</sup>WeChat AI &emsp;
-                <sup>3</sup>William & Mary &emsp;
-                <sup>4</sup>Westlake University
+                <sup>2</sup>William & Mary 
             </div>
             <p class="text-sm md:text-base text-gray-500 mb-4">
-                <sup>§</sup>Work done during internship at WeChat AI &emsp; <sup>†</sup>Corresponding author
+                <sup>†</sup>Corresponding author
             </p>
             <div class="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-lg font-semibold">
                 ICML 2025
@@ -288,81 +284,134 @@ description: "ORPS: Reasoning Through Execution: Unifying Process and Outcome Re
     </div>
 </section>
 
-<!-- Results & Performance -->
+<!-- How to Run Experiments -->
 <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Experimental Results</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How to Run Experiments</h2>
             <p class="text-xl text-gray-600 max-w-4xl mx-auto">
-                ORPS demonstrates significant improvements across multiple code generation benchmarks, achieving state-of-the-art performance while maintaining reasoning interpretability.
+                Reproduce our results and run your own experiments with ORPS across different code generation benchmarks.
             </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
-            <!-- Performance Metrics -->
+        <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <!-- Setup & Prerequisites -->
             <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-                <h3 class="text-xl font-bold text-gray-900 mb-6">Key Performance Improvements</h3>
+                <h3 class="text-xl font-bold text-gray-900 mb-6">📋 Prerequisites & Setup</h3>
                 <div class="space-y-4">
-                    <div class="flex justify-between items-center p-3 bg-green-50 rounded-lg">
-                        <span class="font-semibold text-gray-700">HumanEval Pass@1</span>
-                        <span class="font-bold text-green-600">+12.3%</span>
+                    <div class="p-4 bg-blue-50 rounded-lg">
+                        <h4 class="font-semibold text-blue-800 mb-2">1. Environment Setup</h4>
+                        <div class="bg-gray-900 rounded-lg p-3 mt-2">
+                            <code class="text-green-400 font-mono text-sm">
+                                git clone https://github.com/zhuohaoyu/ORPS.git<br>
+                                cd ORPS<br>
+                                pip install -r requirements.txt
+                            </code>
+                        </div>
                     </div>
-                    <div class="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
-                        <span class="font-semibold text-gray-700">MBPP Pass@1</span>
-                        <span class="font-bold text-blue-600">+8.7%</span>
+                    
+                    <div class="p-4 bg-green-50 rounded-lg">
+                        <h4 class="font-semibold text-green-800 mb-2">2. Model Preparation</h4>
+                        <div class="bg-gray-900 rounded-lg p-3 mt-2">
+                            <code class="text-green-400 font-mono text-sm">
+                                # Download base models<br>
+                                python scripts/download_models.py<br>
+                                # Or use your own model checkpoint
+                            </code>
+                        </div>
                     </div>
-                    <div class="flex justify-between items-center p-3 bg-purple-50 rounded-lg">
-                        <span class="font-semibold text-gray-700">CodeContests</span>
-                        <span class="font-bold text-purple-600">+15.2%</span>
-                    </div>
-                    <div class="flex justify-between items-center p-3 bg-orange-50 rounded-lg">
-                        <span class="font-semibold text-gray-700">Reasoning Quality</span>
-                        <span class="font-bold text-orange-600">+22.1%</span>
+
+                    <div class="p-4 bg-purple-50 rounded-lg">
+                        <h4 class="font-semibold text-purple-800 mb-2">3. Data Preparation</h4>
+                        <div class="bg-gray-900 rounded-lg p-3 mt-2">
+                            <code class="text-green-400 font-mono text-sm">
+                                # Download benchmarks<br>
+                                python scripts/prepare_data.py --datasets humaneval mbpp codecontests
+                            </code>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Method Comparison -->
+            <!-- Running Experiments -->
             <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-                <h3 class="text-xl font-bold text-gray-900 mb-6">Comparison with Baselines</h3>
-                <div class="space-y-3">
-                    <div class="text-sm">
-                        <div class="flex justify-between mb-1">
-                            <span class="font-semibold text-gray-700">ORPS (Ours)</span>
-                            <span class="font-bold text-green-600">87.2%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-green-500 h-2 rounded-full" style="width: 87.2%"></div>
-                        </div>
-                    </div>
-                    <div class="text-sm">
-                        <div class="flex justify-between mb-1">
-                            <span class="text-gray-700">Process Rewards Only</span>
-                            <span class="text-gray-600">78.5%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-blue-400 h-2 rounded-full" style="width: 78.5%"></div>
+                <h3 class="text-xl font-bold text-gray-900 mb-6">🚀 Running Experiments</h3>
+                <div class="space-y-4">
+                    <div class="p-4 bg-orange-50 rounded-lg">
+                        <h4 class="font-semibold text-orange-800 mb-2">Quick Evaluation</h4>
+                        <div class="bg-gray-900 rounded-lg p-3 mt-2">
+                            <code class="text-green-400 font-mono text-sm">
+                                # Run on HumanEval<br>
+                                python evaluate.py --dataset humaneval --model codellama-7b
+                            </code>
                         </div>
                     </div>
-                    <div class="text-sm">
-                        <div class="flex justify-between mb-1">
-                            <span class="text-gray-700">Outcome Rewards Only</span>
-                            <span class="text-gray-600">74.9%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-purple-400 h-2 rounded-full" style="width: 74.9%"></div>
+                    
+                    <div class="p-4 bg-teal-50 rounded-lg">
+                        <h4 class="font-semibold text-teal-800 mb-2">Full Training</h4>
+                        <div class="bg-gray-900 rounded-lg p-3 mt-2">
+                            <code class="text-green-400 font-mono text-sm">
+                                # Train ORPS model<br>
+                                python train.py --config configs/orps_humaneval.yaml
+                            </code>
                         </div>
                     </div>
-                    <div class="text-sm">
-                        <div class="flex justify-between mb-1">
-                            <span class="text-gray-700">Standard PPO</span>
-                            <span class="text-gray-600">69.3%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-gray-400 h-2 rounded-full" style="width: 69.3%"></div>
+
+                    <div class="p-4 bg-rose-50 rounded-lg">
+                        <h4 class="font-semibold text-rose-800 mb-2">Comprehensive Benchmark</h4>
+                        <div class="bg-gray-900 rounded-lg p-3 mt-2">
+                            <code class="text-green-400 font-mono text-sm">
+                                # Run all benchmarks<br>
+                                bash scripts/run_all_experiments.sh
+                            </code>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Experiment Configuration -->
+        <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200 mb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">⚙️ Configuration Options</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🎯</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Model Configuration</h4>
+                    <p class="text-sm text-gray-600">Adjust base model, process/outcome weights, and training hyperparameters in config files.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📊</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Evaluation Metrics</h4>
+                    <p class="text-sm text-gray-600">Choose from Pass@1, Pass@10, reasoning quality scores, and execution success rates.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🔧</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Execution Environment</h4>
+                    <p class="text-sm text-gray-600">Configure timeout limits, safety restrictions, and supported programming languages.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expected Results -->
+        <div class="bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl p-8 border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">📈 Expected Results</h3>
+            <p class="text-gray-700 text-center mb-4 max-w-3xl mx-auto">
+                When running the full experiments, you should expect to see improvements over baseline methods across all benchmarks. 
+                Detailed results and analysis are provided in our ICML 2025 paper.
+            </p>
+            <div class="text-center">
+                <a href="https://arxiv.org/abs/2412.15118" 
+                   class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg">
+                    📄 <span class="ml-2">View Full Results in Paper</span>
+                </a>
             </div>
         </div>
     </div>
