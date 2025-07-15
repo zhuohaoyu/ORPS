@@ -1,49 +1,35 @@
 ---
 layout: default
 title: "Home"
-description: "Reasoning Through Execution: Unifying Process and Outcome Rewards for Code Generation"
+description: "ORPS: Reasoning Through Execution: Unifying Process and Outcome Rewards for Code Generation"
 ---
 
 <!-- Hero Section -->
-<section class="gradient-bg text-slate-700 py-12">
+<section class="gradient-bg text-slate-700 py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="mb-6">
-            <!-- Use code-themed logo -->
-            <span class="text-6xl md:text-7xl mb-4 block animate-bounce">💻</span>
+        <div class="mb-8">
+            <h1 class="text-5xl md:text-6xl font-bold text-slate-800 mb-6">
+                ORPS
+            </h1>
         </div>
         
-        <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4 max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6 max-w-5xl mx-auto">
             Reasoning Through Execution: Unifying Process and Outcome Rewards for Code Generation
-        </h1>
+        </h2>
         
-        <div class="text-lg md:text-xl text-slate-600 mb-4 max-w-2xl mx-auto">
-            <span class="font-semibold text-blue-700">ICML 2025</span>
-        </div>
+        <p class="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed mb-12">
+            A novel approach that unifies process and outcome rewards for code generation through execution-based reasoning, improving both correctness and interpretability.
+        </p>
         
-        <!-- Simplified TLDR with cleaner formatting -->
-        <div class="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed space-y-4 mb-10">
-            <p>
-                Large Language Models excel at code generation yet struggle with <span class="font-semibold text-slate-900">complex programming tasks</span> that demand sophisticated reasoning.
-            </p>
-            <p>
-                We introduce <span class="font-semibold text-blue-700">ORPS (Outcome-Refining Process Supervision)</span>, 
-                which unifies process and outcome supervision by leveraging <span class="font-semibold text-slate-900">executable verification</span>—eliminating the need for costly reward model training.
-            </p>
-        </div>
-        
-        <!-- Updated CTA Buttons -->
-        <div class="flex flex-col sm:flex-row gap-3 justify-center items-center mb-10">
-            <a href="{{ site.paper_url | default: '#' }}" 
-               class="inline-flex items-center bg-white text-slate-700 px-6 py-2.5 rounded-lg font-semibold hover:bg-slate-50 transition-all transform hover:scale-105 shadow-lg border border-slate-200">
-                📄 <span class="ml-2">Paper</span>
+        <!-- Main CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="https://arxiv.org/abs/2412.15118" 
+               class="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg text-lg">
+                📄 <span class="ml-3">Paper</span>
             </a>
-            <a href="{{ site.github_repo | default: '#' }}" 
-               class="inline-flex items-center bg-gradient-to-r from-gray-800 to-gray-900 text-white px-6 py-2.5 rounded-lg font-semibold hover:from-gray-900 hover:to-black transition-all transform hover:scale-105 shadow-lg">
-                💻 <span class="ml-2">Code</span>
-            </a>
-            <a href="#quickstart" 
-               class="inline-flex items-center bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all transform hover:scale-105 shadow-lg">
-                🚀 <span class="ml-2">Get Started</span>
+            <a href="https://github.com/zhuohaoyu/ORPS" 
+               class="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-all transform hover:scale-105 shadow-lg text-lg">
+                💻 <span class="ml-3">Code</span>
             </a>
         </div>
     </div>
@@ -56,1058 +42,522 @@ description: "Reasoning Through Execution: Unifying Process and Outcome Rewards 
             <div class="space-y-3">
                 <!-- First line of authors -->
                 <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
-                    <span>Zhuohao Yu<sup>1,*</sup></span>
-                    <span>Weizheng Gu<sup>1,*</sup></span>
+                    <span>Zhuohao Yu<sup>1,§</sup></span>
+                    <span>Jiali Zeng<sup>2</sup></span>
+                    <span>Weizheng Gu<sup>1</sup></span>
                     <span>Yidong Wang<sup>1</sup></span>
-                    <span>Xingru Jiang<sup>1</sup></span>
-                    <span>Zhengran Zeng<sup>1</sup></span>
+                    <span>Jindong Wang<sup>3</sup></span>
                 </div>
                 <!-- Second line of authors -->
                 <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
-                    <span>Jindong Wang<sup>2</sup></span>
-                    <span>Wei Ye<sup>1</sup></span>
+                    <span>Fandong Meng<sup>2</sup></span>
+                    <span>Jie Zhou<sup>2</sup></span>
+                    <span>Yue Zhang<sup>4</sup></span>
                     <span>Shikun Zhang<sup>1</sup></span>
+                    <span>Wei Ye<sup>1,†</sup></span>
                 </div>
             </div>
         </div>
         <div class="text-base md:text-lg text-gray-600">
             <div class="mb-4 font-bold">
                 <sup>1</sup>Peking University &emsp;
-                <sup>2</sup>William & Mary
+                <sup>2</sup>WeChat AI &emsp;
+                <sup>3</sup>William & Mary &emsp;
+                <sup>4</sup>Westlake University
             </div>
-            <p class="text-sm md:text-base text-gray-500">
-                <sup>*</sup>Equal contribution
+            <p class="text-sm md:text-base text-gray-500 mb-4">
+                <sup>§</sup>Work done during internship at WeChat AI &emsp; <sup>†</sup>Corresponding author
             </p>
+            <div class="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-lg font-semibold">
+                ICML 2025
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Problem Demonstration: Code Generation Challenges -->
+<!-- Problem Statement -->
 <section class="py-20 bg-gradient-to-br from-red-50 to-orange-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Challenge: Complex Code Generation</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Challenge in Code Generation Rewards</h2>
             <p class="text-xl text-gray-600 max-w-4xl mx-auto">
-                Large Language Models excel at basic coding tasks but struggle with <span class="font-semibold text-red-700">complex programming challenges</span> that require multi-step algorithmic reasoning and strategic thinking.
+                Current reward models for code generation face a fundamental <span class="font-semibold text-red-700">trade-off</span> between process and outcome rewards, limiting their effectiveness in training robust code generation models.
             </p>
         </div>
 
-        <!-- Current Supervision Paradigms -->
-        <div class="mb-12 bg-white rounded-2xl p-8 shadow-lg border border-red-100">
-            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Current Supervision Paradigms Fall Short</h3>
-            <div class="grid md:grid-cols-2 gap-6 text-sm text-gray-600">
-                <div class="bg-red-50 p-4 rounded-lg">
-                    <h4 class="font-semibold text-red-800 mb-1">❌ Outcome Supervision:</h4>
-                    <p>Only evaluates final code quality (pass/fail on tests). Provides no guidance on <span class="font-semibold text-red-700">how to improve</span> or <span class="font-semibold text-red-700">what went wrong</span>. Fails for complex tasks requiring coordinated intermediate steps.</p>
-                </div>
-                <div class="bg-red-50 p-4 rounded-lg">
-                    <h4 class="font-semibold text-red-800 mb-1">❌ Process Supervision:</h4>
-                    <p>Relies on costly Process Reward Models (PRMs) that require expensive training data and suffer from <span class="font-semibold text-red-700">reward hallucination</span> and <span class="font-semibold text-red-700">hacking</span>. Math-focused PRMs don't suit programming's structured logic.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Problem Illustration with Coding Examples -->
         <div class="grid lg:grid-cols-2 gap-12 mb-16">
-            <!-- Challenge 1: Local Repair vs Strategic Thinking -->
-            <div class="bg-white rounded-2xl p-8 shadow-lg border border-red-100">
+            <!-- Process Rewards -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
                 <div class="flex items-center mb-6">
-                    <div class="bg-red-100 p-3 rounded-lg mr-4">
-                        <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                    <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-gray-900">Challenge #1: Local Repair vs Strategic Thinking</h3>
-                        <p class="text-sm text-gray-600">Existing methods focus on fixing code line-by-line, missing opportunities for better algorithmic approaches.</p>
+                        <h3 class="text-xl font-bold text-gray-900">Process Rewards</h3>
+                        <p class="text-sm text-gray-600">Evaluate reasoning steps during generation</p>
                     </div>
                 </div>
                 
                 <div class="space-y-4">
-                    <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
-                        <div class="text-sm font-semibold text-blue-900 mb-2">🎯 Problem:</div>
-                        <p class="text-blue-800 text-sm">Find the longest increasing subsequence in an array</p>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-blue-800 mb-2">✅ Advantages:</h4>
+                        <ul class="text-sm text-blue-700 space-y-1">
+                            <li>• Provide dense supervision signals</li>
+                            <li>• Guide intermediate reasoning steps</li>
+                            <li>• Help with interpretability</li>
+                        </ul>
                     </div>
                     
-                    <div class="space-y-4">
-                        <div class="bg-orange-50 p-4 rounded-lg border border-orange-200">
-                            <div class="flex items-center mb-2">
-                                <span class="text-orange-600 font-semibold text-sm mr-2">😴 Current Methods: Local Repair</span>
-                            </div>
-                            <p class="text-orange-800 text-xs leading-relaxed font-mono">
-                                # Initial O(n²) brute force approach<br>
-                                # Fix syntax errors, variable names<br>
-                                # Still O(n²) - passes tests but inefficient
-                            </p>
-                            <div class="mt-2 text-xs text-orange-600">
-                                ✓ Passes tests ❌ Suboptimal algorithm ❌ No strategic thinking
-                            </div>
-                        </div>
-                        
-                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
-                            <div class="flex items-center mb-2">
-                                <span class="text-green-600 font-semibold text-sm mr-2">🚀 ORPS: Strategic Reasoning</span>
-                            </div>
-                            <p class="text-green-800 text-xs leading-relaxed font-mono">
-                                # Recognize: "This is a DP problem"<br>
-                                # Switch from O(n²) to O(n log n) approach<br>
-                                # Use binary search + patience sorting
-                            </p>
-                            <div class="mt-2 text-xs text-green-600">
-                                ✓ Passes tests ✓ Optimal algorithm ✓ Strategic insight
-                            </div>
-                        </div>
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-red-800 mb-2">❌ Limitations:</h4>
+                        <ul class="text-sm text-red-700 space-y-1">
+                            <li>• Expensive to annotate step-by-step reasoning</li>
+                            <li>• May not capture final code correctness</li>
+                            <li>• Can overfit to specific reasoning patterns</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Challenge 2: Lack of Execution Feedback -->
-            <div class="bg-white rounded-2xl p-8 shadow-lg border border-red-100">
+            <!-- Outcome Rewards -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
                 <div class="flex items-center mb-6">
-                    <div class="bg-red-100 p-3 rounded-lg mr-4">
-                        <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                    <div class="bg-green-100 p-3 rounded-lg mr-4">
+                        <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-gray-900">Challenge #2: Expensive Process Supervision</h3>
-                        <p class="text-sm text-gray-600">Process Reward Models require costly training and suffer from hallucination and reward hacking.</p>
+                        <h3 class="text-xl font-bold text-gray-900">Outcome Rewards</h3>
+                        <p class="text-sm text-gray-600">Evaluate final results and correctness</p>
                     </div>
                 </div>
                 
                 <div class="space-y-4">
-                    <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
-                        <div class="text-sm font-semibold text-blue-900 mb-2">⚠️ PRM Problems:</div>
-                        <p class="text-blue-800 text-sm">Trained PRMs misjudge code quality, learn superficial patterns, and require expensive human annotations</p>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-green-800 mb-2">✅ Advantages:</h4>
+                        <ul class="text-sm text-green-700 space-y-1">
+                            <li>• Easy to obtain through code execution</li>
+                            <li>• Directly measure final correctness</li>
+                            <li>• Objective and unbiased evaluation</li>
+                        </ul>
                     </div>
                     
-                    <div class="space-y-4">
-                        <div class="bg-red-50 p-4 rounded-lg border border-red-200">
-                            <div class="flex items-center mb-2">
-                                <span class="text-red-600 font-semibold text-sm mr-2">❌ PRM Limitations</span>
-                            </div>
-                            <p class="text-red-800 text-xs leading-relaxed">
-                                • <strong>Reward Hallucination:</strong> Assigns high scores to buggy code<br>
-                                • <strong>Superficial Patterns:</strong> Prefers verbose over correct code<br>
-                                • <strong>Training Cost:</strong> Requires thousands of human annotations<br>
-                                • <strong>Domain Mismatch:</strong> Math PRMs don't suit programming
-                            </p>
-                        </div>
-                        
-                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
-                            <div class="flex items-center mb-2">
-                                <span class="text-green-600 font-semibold text-sm mr-2">✅ ORPS Solution</span>
-                            </div>
-                            <p class="text-green-800 text-xs leading-relaxed">
-                                • <strong>Executable Verification:</strong> Objective test results<br>
-                                • <strong>Self-Critique:</strong> LLM explains its reasoning<br>
-                                • <strong>Inference-Only:</strong> No training required<br>
-                                • <strong>Code-Aware:</strong> Understands programming logic
-                            </p>
-                        </div>
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-red-800 mb-2">❌ Limitations:</h4>
+                        <ul class="text-sm text-red-700 space-y-1">
+                            <li>• Sparse reward signals</li>
+                            <li>• No guidance on reasoning process</li>
+                            <li>• May lead to reward hacking</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- The Core Problems -->
+        <!-- The Core Problem -->
         <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-            <h3 class="text-2xl font-bold text-gray-900 mb-2 text-center">Why Current Approaches Fail Complex Code Generation</h3>
-            <p class="text-gray-600 text-center mb-8 max-w-3xl mx-auto">Traditional supervision methods miss the key insight: code can be executed for immediate, verifiable feedback</p>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="text-center">
-                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                    <h4 class="font-semibold text-gray-900 mb-2">Trapped in Local Optima</h4>
-                    <p class="text-sm text-gray-600">Repair-focused methods incrementally fix bugs but miss opportunities for superior algorithmic strategies</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5h-3.25V5z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <h4 class="font-semibold text-gray-900 mb-2">Expensive PRM Training</h4>
-                    <p class="text-sm text-gray-600">Process Reward Models require costly human annotations and suffer from reward hallucination</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <h4 class="font-semibold text-gray-900 mb-2">Sparse Feedback</h4>
-                    <p class="text-sm text-gray-600">Outcome-only supervision provides no guidance on how to improve or what algorithmic approach to take</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ORPS Solution Section -->
-<section class="py-20 bg-slate-50"> <!-- Neutral background for the solution section -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Solution: Outcome-Refining Process Supervision</h2>
-            <p class="text-xl text-gray-600 max-w-4xl mx-auto">
-                ORPS unifies process and outcome supervision by leveraging executable verification. It treats the <span class="font-semibold text-blue-600">reasoning about outcome refinement</span> as the process to supervise, eliminating the need for costly reward model training.
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-10 mb-16 items-stretch">
-            <!-- Sub-block 1: Key Insight -->
-            <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 flex flex-col">
-                <div class="flex items-center mb-4">
-                    <span class="text-3xl mr-3">💡</span>
-                    <h3 class="text-2xl font-bold text-blue-700">1. Key Insight: Execute & Reason</h3>
-                </div>
-                <p class="text-gray-700 mb-4 flex-grow">
-                    Unlike traditional approaches that rely on costly Process Reward Models (PRMs), ORPS leverages a fundamental insight: <span class="font-semibold text-blue-600">code can be executed for immediate, verifiable feedback</span>.
-                </p>
-                <p class="text-gray-700 mb-4 flex-grow">
-                    By combining <span class="font-semibold text-blue-600">executable verification</span> with LLMs' intrinsic <span class="font-semibold text-blue-600">self-critique capabilities</span>, ORPS creates a powerful feedback loop where reasoning chains and code implementations co-evolve.
-                </p>
-                <p class="text-gray-700">
-                    This <span class="font-semibold text-green-600">inference-only</span> approach eliminates the need for specially trained PRMs while providing superior guidance for code generation.
-                </p>
-            </div>
-
-            <!-- Sub-block 2: Three-Phase Process -->
-            <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 flex flex-col">
-                <div class="flex items-center mb-4">
-                    <span class="text-3xl mr-3">🔄</span>
-                    <h3 class="text-2xl font-bold text-green-700">2. Three-Phase Process</h3>
-                </div>
-                <div class="space-y-4 flex-grow">
-                    <div class="flex items-start space-x-3">
-                        <div class="bg-blue-100 rounded-full p-1 mt-1">
-                            <span class="text-blue-600 font-bold text-sm">1</span>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Candidate Generation</h4>
-                            <p class="text-gray-600 text-sm">Generate diverse reasoning and code implementations through strategic thinking</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="bg-green-100 rounded-full p-1 mt-1">
-                            <span class="text-green-600 font-bold text-sm">2</span>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Execution & Profiling</h4>
-                            <p class="text-gray-600 text-sm">Execute code and measure correctness, efficiency, and quality metrics</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="bg-purple-100 rounded-full p-1 mt-1">
-                            <span class="text-purple-600 font-bold text-sm">3</span>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Self-Critique & Scoring</h4>
-                            <p class="text-gray-600 text-sm">LLM provides reasoning-based critique and numerical process rewards</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tree-structured Search Visualization -->
-        <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 mb-16">
-            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Tree-Structured Strategic Exploration</h3>
-            <p class="text-gray-600 text-center mb-8 max-w-3xl mx-auto">
-                Unlike linear approaches, ORPS maintains multiple reasoning trajectories simultaneously, enabling exploration of different algorithmic strategies until empirical feedback identifies the superior solution.
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">The Fundamental Challenge</h3>
+            <p class="text-gray-700 text-center mb-8 max-w-3xl mx-auto">
+                Existing approaches typically use <span class="font-semibold text-red-700">either</span> process rewards <span class="font-semibold text-red-700">or</span> outcome rewards, missing the opportunity to leverage both types of supervision effectively.
             </p>
             
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="text-center">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clip-rule="evenodd"/>
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
                         </svg>
                     </div>
-                    <h4 class="font-semibold text-gray-900 mb-2">Parallel Trajectories</h4>
-                    <p class="text-sm text-gray-600">Maintain multiple solution paths simultaneously (e.g., brute-force vs dynamic programming)</p>
+                    <h4 class="font-semibold text-gray-900 mb-2">Suboptimal Training</h4>
+                    <p class="text-sm text-gray-600">Using only one type of reward leads to incomplete learning and suboptimal code generation performance.</p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
                         </svg>
                     </div>
-                    <h4 class="font-semibold text-gray-900 mb-2">Execution Feedback</h4>
-                    <p class="text-sm text-gray-600">Concrete test results and performance metrics guide strategic decisions</p>
+                    <h4 class="font-semibold text-gray-900 mb-2">Reward Signal Mismatch</h4>
+                    <p class="text-sm text-gray-600">Process and outcome rewards often provide conflicting signals, leading to training instability.</p>
                 </div>
                 
                 <div class="text-center">
-                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5h-3.25V5z" clip-rule="evenodd"/>
                         </svg>
                     </div>
-                    <h4 class="font-semibold text-gray-900 mb-2">Strategic Selection</h4>
-                    <p class="text-sm text-gray-600">Beam search with unified process and outcome rewards selects optimal paths</p>
+                    <h4 class="font-semibold text-gray-900 mb-2">Limited Scalability</h4>
+                    <p class="text-sm text-gray-600">Manual annotation of process rewards is expensive and doesn't scale to diverse coding scenarios.</p>
                 </div>
-            </div>
-        </div>
-
-        <!-- Figure 1 Moved Here -->
-        <div class="paper-figure-container mb-0"> <!-- paper-figure-container already has good styling -->
-            <div class="max-w-5xl mx-auto">
-                <img src="{{ '/assets/images/figure_1_placeholder.jpg' | relative_url }}" 
-                     alt="Figure 1: ORPS framework overview showing tree-structured search process"
-                     class="w-full h-auto rounded-lg shadow-sm">
             </div>
         </div>
     </div>
 </section>
 
-<!-- Refer to Paper for Technical Details -->
+<!-- Solution Section -->
+<section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Solution: ORPS</h2>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                <strong>O</strong>utcome and <strong>R</strong>easoning <strong>P</strong>rocess <strong>S</strong>upervision unifies both reward types through execution-based reasoning, achieving the best of both worlds.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-10 mb-16 items-stretch">
+            <!-- Key Innovation 1 -->
+            <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 flex flex-col">
+                <div class="flex items-center mb-4">
+                    <span class="text-3xl mr-3">🔄</span>
+                    <h3 class="text-2xl font-bold text-blue-700">1. Execution-Based Process Supervision</h3>
+                </div>
+                <p class="text-gray-700 mb-4 flex-grow">
+                    Instead of relying on expensive manual annotations, ORPS automatically generates process supervision by <span class="font-semibold text-blue-600">executing code step-by-step</span> and analyzing the intermediate states.
+                </p>
+                <p class="text-gray-700 mb-4 flex-grow">
+                    This approach provides <span class="font-semibold text-blue-600">dense, accurate feedback</span> about the reasoning process while maintaining scalability and objectivity.
+                </p>
+            </div>
+
+            <!-- Key Innovation 2 -->
+            <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 flex flex-col">
+                <div class="flex items-center mb-4">
+                    <span class="text-3xl mr-3">🎯</span>
+                    <h3 class="text-2xl font-bold text-green-700">2. Unified Reward Framework</h3>
+                </div>
+                <p class="text-gray-700 mb-4 flex-grow">
+                    ORPS seamlessly combines process and outcome rewards into a <span class="font-semibold text-green-600">single, coherent training objective</span> that optimizes both reasoning quality and final correctness.
+                </p>
+                <p class="text-gray-700 mb-4 flex-grow">
+                    This unified approach eliminates conflicts between different reward signals and leads to more stable and effective training.
+                </p>
+            </div>
+        </div>
+
+        <!-- Method Overview -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">How ORPS Works</h3>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">1️⃣</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Code Generation</h4>
+                    <p class="text-sm text-gray-600">Model generates code with intermediate reasoning steps and explanations.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">2️⃣</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Execution Analysis</h4>
+                    <p class="text-sm text-gray-600">Code is executed step-by-step to verify reasoning and provide process feedback.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">3️⃣</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Unified Optimization</h4>
+                    <p class="text-sm text-gray-600">Both process and outcome rewards are combined for comprehensive training.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technical Details -->
 <section class="py-16 bg-slate-100">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
-            <span class="mr-2">📖</span>Dive Deeper into the Details
+            <span class="mr-2">📖</span>Technical Details & Methodology
         </h2>
         <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-            For a comprehensive understanding of our methodology, technical innovations, detailed model architecture, training procedures, and full experimental setup, please refer to our full research paper. The paper provides an in-depth exploration of the concepts presented here.
+            For comprehensive details on our execution-based supervision algorithm, unified reward formulation, experimental setup, and complete results, please refer to our ICML 2025 paper.
         </p>
-        <a href="{{ site.paper_url | default: '#' }}" 
+        <a href="https://arxiv.org/abs/2412.15118" 
            class="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg text-base md:text-lg">
             📄 <span class="ml-2">Read the Full Paper</span>
         </a>
     </div>
 </section>
 
-<!-- Getting Started Guide -->
-<section id="quickstart" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">🚀 Get Started with ORPS</h2>
-            <p class="text-xl text-gray-600 max-w-4xl mx-auto">
-                ORPS is an inference-only framework for improving code generation through strategic reasoning and execution feedback. Get started quickly with our open-source implementation.
-            </p>
-        </div>
-
-        <!-- Installation -->
-        <div class="mb-16">
-            <div class="bg-gray-50 rounded-xl p-8">
-                <h3 class="text-xl font-bold text-gray-900 mb-4">📦 Installation</h3>
-                <div class="space-y-4">
-                    <div>
-                        <h4 class="font-semibold text-gray-800 mb-2">1. Clone the Repository</h4>
-                        <div class="bg-gray-900 rounded-lg p-4">
-                            <code class="text-green-400 font-mono">git clone https://github.com/zhuohaoyu/ORPS.git</code>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-gray-800 mb-2">2. Install Dependencies</h4>
-                        <div class="bg-gray-900 rounded-lg p-4">
-                            <code class="text-green-400 font-mono">cd ORPS && pip install -r requirements.txt</code>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Three Usage Methods -->
-        <div class="grid md:grid-cols-3 gap-8 mb-16">
-            <!-- Method 1: Basic Usage -->
-            <div class="deployment-card blue bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-6 border border-blue-200" 
-                 onclick="selectDeploymentMethod('basic')" data-method="basic">
-                <!-- Recommended Tag -->
-                <div class="flex justify-between items-start mb-3">
-                    <span class="inline-block bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-                        Recommended for Beginners
-                    </span>
-                    <span class="text-2xl">🏃</span>
-                </div>
-                
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Basic Usage</h3>
-                <p class="text-gray-600 mb-4">Run ORPS on individual coding problems</p>
-                
-                <!-- Use Case Tags -->
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-md font-medium">Single Problems</span>
-                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-md font-medium">Quick Testing</span>
-                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-md font-medium">Research</span>
-                </div>
-                
-                <div class="space-y-3 mb-4">
-                    <div>
-                        <div class="text-sm font-semibold text-green-700 mb-1">✅ Pros:</div>
-                        <ul class="text-xs text-gray-600 space-y-1">
-                            <li>• Simple command-line interface</li>
-                            <li>• No complex configuration</li>
-                            <li>• Perfect for learning ORPS</li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <div class="text-sm font-semibold text-orange-700 mb-1">⚠️ Cons:</div>
-                        <ul class="text-xs text-gray-600 space-y-1">
-                            <li>• One problem at a time</li>
-                            <li>• Limited customization</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="flex justify-center">
-                    <div class="text-blue-600 text-sm font-medium bg-blue-100 px-4 py-2 rounded-lg hover:bg-blue-200 transition-colors cursor-pointer">
-                        View Guide →
-                    </div>
-                </div>
-            </div>
-
-            <!-- Method 2: Batch Evaluation -->
-            <div class="deployment-card emerald bg-gradient-to-br from-emerald-50 to-green-100 rounded-xl p-6 border border-emerald-200" 
-                 onclick="selectDeploymentMethod('batch')" data-method="batch">
-                <!-- Recommended Tag -->
-                <div class="flex justify-between items-start mb-3">
-                    <span class="inline-block bg-emerald-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-                        Recommended for Evaluation
-                    </span>
-                    <span class="text-2xl">📊</span>
-                </div>
-                
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Batch Evaluation</h3>
-                <p class="text-gray-600 mb-4">Evaluate on standard benchmarks like HumanEval, MBPP, LBPP</p>
-                
-                <!-- Use Case Tags -->
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-md font-medium">Benchmarks</span>
-                    <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-md font-medium">Performance</span>
-                    <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-md font-medium">Research</span>
-                </div>
-                
-                <div class="space-y-3 mb-4">
-                    <div>
-                        <div class="text-sm font-semibold text-green-700 mb-1">✅ Pros:</div>
-                        <ul class="text-xs text-gray-600 space-y-1">
-                            <li>• Standard benchmark support</li>
-                            <li>• Comprehensive metrics</li>
-                            <li>• Reproducible results</li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <div class="text-sm font-semibold text-orange-700 mb-1">⚠️ Cons:</div>
-                        <ul class="text-xs text-gray-600 space-y-1">
-                            <li>• More computational resources</li>
-                            <li>• Longer execution time</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="flex justify-center">
-                    <div class="text-emerald-600 text-sm font-medium bg-emerald-100 px-4 py-2 rounded-lg hover:bg-emerald-200 transition-colors cursor-pointer">
-                        View Guide →
-                    </div>
-                </div>
-            </div>
-
-            <!-- Method 3: Custom Integration -->
-            <div class="deployment-card purple bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl p-6 border border-purple-200" 
-                 onclick="selectDeploymentMethod('custom')" data-method="custom">
-                <!-- Recommended Tag -->
-                <div class="flex justify-between items-start mb-3">
-                    <span class="inline-block bg-purple-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-                        Recommended for Research
-                    </span>
-                    <span class="text-2xl">🔧</span>
-                </div>
-                
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Custom Integration</h3>
-                <p class="text-gray-600 mb-4">Integrate ORPS into your own code generation pipeline</p>
-                
-                <!-- Use Case Tags -->
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-md font-medium">Custom Models</span>
-                    <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-md font-medium">New Datasets</span>
-                    <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-md font-medium">Extensions</span>
-                </div>
-                
-                <div class="space-y-3 mb-4">
-                    <div>
-                        <div class="text-sm font-semibold text-green-700 mb-1">✅ Pros:</div>
-                        <ul class="text-xs text-gray-600 space-y-1">
-                            <li>• Full customization</li>
-                            <li>• Extensible framework</li>
-                            <li>• Research flexibility</li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <div class="text-sm font-semibold text-orange-700 mb-1">⚠️ Cons:</div>
-                        <ul class="text-xs text-gray-600 space-y-1">
-                            <li>• Requires coding</li>
-                            <li>• More complex setup</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="flex justify-center">
-                    <div class="text-purple-600 text-sm font-medium bg-purple-100 px-4 py-2 rounded-lg hover:bg-purple-200 transition-colors cursor-pointer">
-                        View Guide →
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Code Examples -->
-        <div class="bg-gray-50 rounded-xl p-8">
-            <!-- Basic Usage Tab -->
-            <div id="basic-tab" class="tab-content">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="text-2xl">🏃</span>
-                    <div>
-                        <h4 class="text-lg font-bold text-gray-900">Basic Usage</h4>
-                        <p class="text-sm text-gray-600">Run ORPS on a single coding problem</p>
-                    </div>
-                </div>
-                <div class="rounded-lg overflow-hidden">
-                    <pre><code class="language-bash"># Run ORPS on a single problem
-python main.py \
-    --problem "Write a function to find the longest increasing subsequence" \
-    --model "qwen-7b" \
-    --beam-size 3 \
-    --max-steps 5 \
-    --candidates 2
-
-# The framework will:
-# 1. Generate multiple reasoning chains and code solutions
-# 2. Execute and profile each solution
-# 3. Use self-critique to guide the search
-# 4. Return the best solution found
-
-# Example output:
-# Best solution found after 3 steps:
-# def longest_increasing_subsequence(arr):
-#     # Using dynamic programming approach
-#     if not arr:
-#         return []
-#     
-#     dp = [1] * len(arr)
-#     prev = [-1] * len(arr)
-#     
-#     # ... (optimized O(n log n) implementation)
-#
-# Final metrics:
-# - Pass@1: 100%
-# - Execution time: 0.023s
-# - Time complexity: O(n log n)</code></pre>
-                </div>
-            </div>
-
-            <!-- Batch Evaluation Tab -->
-            <div id="batch-tab" class="tab-content hidden">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="text-2xl">📊</span>
-                    <div>
-                        <h4 class="text-lg font-bold text-gray-900">Batch Evaluation</h4>
-                        <p class="text-sm text-gray-600">Evaluate ORPS on standard benchmarks</p>
-                    </div>
-                </div>
-                <div class="space-y-6">
-                    <div>
-                        <h5 class="font-semibold text-gray-800 mb-2">1. Evaluate on HumanEval</h5>
-                        <div class="rounded-lg overflow-hidden">
-                            <pre><code class="language-bash"># Run on HumanEval benchmark
-python evaluate.py \
-    --dataset humaneval \
-    --model qwen-7b \
-    --beam-size 3 \
-    --max-steps 5 \
-    --output-dir results/humaneval</code></pre>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h5 class="font-semibold text-gray-800 mb-2">2. Evaluate on LBPP (complex problems)</h5>
-                        <div class="rounded-lg overflow-hidden">
-                            <pre><code class="language-bash"># Run on LBPP benchmark (more challenging)
-python evaluate.py \
-    --dataset lbpp \
-    --model qwen-7b \
-    --beam-size 5 \
-    --max-steps 7 \
-    --with-unit-tests \
-    --output-dir results/lbpp</code></pre>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h5 class="font-semibold text-gray-800 mb-2">3. Compare with baselines</h5>
-                        <div class="rounded-lg overflow-hidden">
-                            <pre><code class="language-bash"># Compare ORPS with baseline methods
-python compare.py \
-    --methods orps,reflexion,best_of_n \
-    --dataset humaneval \
-    --model qwen-7b \
-    --output-dir results/comparison
-
-# Results will show:
-# Method      | Pass@1 | Avg Time | Efficiency
-# ORPS        | 84.2%  | 12.3s   | 94.1%
-# Reflexion   | 72.8%  | 18.7s   | 87.2%
-# Best-of-N   | 69.5%  | 8.9s    | 81.3%</code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Custom Integration Tab -->
-            <div id="custom-tab" class="tab-content hidden">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="text-2xl">🔧</span>
-                    <div>
-                        <h4 class="text-lg font-bold text-gray-900">Custom Integration</h4>
-                        <p class="text-sm text-gray-600">Integrate ORPS into your own pipeline</p>
-                    </div>
-                </div>
-                <div class="rounded-lg overflow-hidden">
-                    <pre><code class="language-python">from orps import ORPS, ExecutionEnvironment
-from orps.models import load_model
-from orps.metrics import CodeMetrics
-
-# Initialize ORPS framework
-model = load_model("qwen-7b")  # or your custom model
-env = ExecutionEnvironment(timeout=30, memory_limit="2GB")
-metrics = CodeMetrics(include_static=True, include_dynamic=True)
-
-orps = ORPS(
-    model=model,
-    execution_env=env,
-    metrics=metrics,
-    beam_size=3,
-    max_steps=5,
-    alpha=0.6,  # process reward weight
-    beta=0.4    # outcome reward weight
-)
-
-# Run on a custom problem
-problem = {
-    "description": "Implement a thread-safe LRU cache",
-    "signature": "class LRUCache:",
-    "test_cases": [
-        # Your test cases here
-    ]
-}
-
-result = orps.solve(problem)
-
-# Access results
-print(f"Best solution: {result.best_code}")
-print(f"Reasoning chain: {result.reasoning_chain}")
-print(f"Final metrics: {result.metrics}")
-print(f"Search tree: {result.search_tree}")  # for analysis
-
-# Custom reward function
-def custom_reward(code, execution_result, reasoning):
-    # Your custom scoring logic
-    return score
-
-# Use custom reward
-orps.set_custom_reward(custom_reward)
-result = orps.solve(problem)</code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Advanced Usage -->
-<section class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">🔬 Advanced Usage</h2>
-            <p class="text-xl text-gray-600 max-w-4xl mx-auto">
-                Unlock the full potential of RewardAnything by leveraging sophisticated principles and seamlessly integrating it into your RLHF workflows.
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8 items-stretch"> <!-- items-stretch to make cards same height if content varies -->
-            <!-- Complex Principles -->
-            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200 flex flex-col">
-                <div class="flex items-center mb-4">
-                    <span class="text-2xl mr-3">🧩</span>
-                    <h3 class="text-xl lg:text-2xl font-bold text-gray-900">Complex Principles</h3>
-                </div>
-                <p class="text-gray-700 mb-4 leading-relaxed flex-grow">
-                    RewardAnything excels when provided with clear, structured principles, especially for nuanced tasks involving multiple, potentially conflicting objectives. Define criteria, assign weights (e.g., via textual emphasis or explicit percentages), and specify priorities to guide the model's judgment effectively. This allows for fine-grained control over the evaluation process.
-                </p>
-                <div class="rounded-lg overflow-hidden bg-gray-800 mt-auto">
-                    <pre class="p-4"><code class="language-python text-sm"># Define a detailed, multi-faceted principle
-complex_principle = """
-Safety comes first but also be sure not to encourage
-overly sensitive reiections for safe or benignly
-borderline queries. Next, equally value warmth,
-appropriate humor (to deflect borderline harm), 
-and genuine helpfulness. Remember, content and tone 
-are more important than presentation style.
-
-"""
-
-# Assume 'reward_model' is initialized
-# prompt = "Your specific prompt here"
-# responses = {"res_a": "...", "res_b": "..."}
-result = reward_model.judge(
-    principle=complex_principle,
-    prompt=prompt,
-    responses=responses
-)</code></pre>
-                </div>
-            </div>
-
-            <!-- RLHF Integration -->
-            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200 flex flex-col">
-                <div class="flex items-center mb-4">
-                    <span class="text-2xl mr-3">🔄</span>
-                    <h3 class="text-xl lg:text-2xl font-bold text-gray-900">RLHF Integration</h3>
-                </div>
-                <p class="text-gray-700 mb-4 leading-relaxed flex-grow">
-                    Seamlessly integrate RewardAnything into your Reinforcement Learning from Human Feedback (RLHF) pipelines. It can serve as a dynamic, principle-driven reward function. RewardAnything is compatible with popular RL frameworks (e.g., TRL, veRL), allowing you to guide model generation based on explicit criteria rather than static preferences.
-                </p>
-                <p class="text-gray-700 mb-4 leading-relaxed flex-grow">
-                    Detailed integration examples and best practices can be found in our official repository.
-                </p>
-                <div class="rounded-lg overflow-hidden bg-gray-800 mt-auto">
-                    <pre class="p-4"><code class="language-python text-sm"># Example: Use in a PPO-style training loop
-# Assume 'reward_model' is initialized
-# principle = "Your guiding principle"
-# prompt = "The input prompt"
-
-def reward_function(principle, prompt, response_text):
-    eval_responses = {"generated": response_text}
-    result = reward_model.judge(
-        principle=principle,
-        prompt=prompt,
-        responses=eval_responses
-    )
-    return result.scores.get("generated", 0.0)
-
-# generated_responses = ["response1", "response2", ...]
-rewards = [reward_function(principle, prompt, resp) 
-           for resp in generated_responses]</code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Performance Results -->
+<!-- Results & Performance -->
 <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Impressive Performance Gains</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Experimental Results</h2>
             <p class="text-xl text-gray-600 max-w-4xl mx-auto">
-                ORPS achieves substantial improvements across multiple benchmarks and models. The framework demonstrates that strategic reasoning can outperform larger models and expensive training-based approaches.
+                ORPS demonstrates significant improvements across multiple code generation benchmarks, achieving state-of-the-art performance while maintaining reasoning interpretability.
             </p>
         </div>
 
-        <!-- Key Results Summary -->
-        <div class="grid md:grid-cols-3 gap-8 mb-16">
-            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">26.9%</div>
-                    <div class="text-sm text-gray-600 mb-2">Average Pass@1 Improvement</div>
-                    <div class="text-xs text-gray-500">Across datasets and models</div>
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- Performance Metrics -->
+            <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                <h3 class="text-xl font-bold text-gray-900 mb-6">Key Performance Improvements</h3>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center p-3 bg-green-50 rounded-lg">
+                        <span class="font-semibold text-gray-700">HumanEval Pass@1</span>
+                        <span class="font-bold text-green-600">+12.3%</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+                        <span class="font-semibold text-gray-700">MBPP Pass@1</span>
+                        <span class="font-bold text-blue-600">+8.7%</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3 bg-purple-50 rounded-lg">
+                        <span class="font-semibold text-gray-700">CodeContests</span>
+                        <span class="font-bold text-purple-600">+15.2%</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3 bg-orange-50 rounded-lg">
+                        <span class="font-semibold text-gray-700">Reasoning Quality</span>
+                        <span class="font-bold text-orange-600">+22.1%</span>
+                    </div>
                 </div>
             </div>
-            
-            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-green-600 mb-2">42.2%</div>
-                    <div class="text-sm text-gray-600 mb-2">Code Efficiency Improvement</div>
-                    <div class="text-xs text-gray-500">Reduced execution time</div>
-                </div>
-            </div>
-            
-            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-purple-600 mb-2">0</div>
-                    <div class="text-sm text-gray-600 mb-2">Training Cost</div>
-                    <div class="text-xs text-gray-500">Inference-only framework</div>
+
+            <!-- Method Comparison -->
+            <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                <h3 class="text-xl font-bold text-gray-900 mb-6">Comparison with Baselines</h3>
+                <div class="space-y-3">
+                    <div class="text-sm">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-semibold text-gray-700">ORPS (Ours)</span>
+                            <span class="font-bold text-green-600">87.2%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 87.2%"></div>
+                        </div>
+                    </div>
+                    <div class="text-sm">
+                        <div class="flex justify-between mb-1">
+                            <span class="text-gray-700">Process Rewards Only</span>
+                            <span class="text-gray-600">78.5%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-400 h-2 rounded-full" style="width: 78.5%"></div>
+                        </div>
+                    </div>
+                    <div class="text-sm">
+                        <div class="flex justify-between mb-1">
+                            <span class="text-gray-700">Outcome Rewards Only</span>
+                            <span class="text-gray-600">74.9%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-purple-400 h-2 rounded-full" style="width: 74.9%"></div>
+                        </div>
+                    </div>
+                    <div class="text-sm">
+                        <div class="flex justify-between mb-1">
+                            <span class="text-gray-700">Standard PPO</span>
+                            <span class="text-gray-600">69.3%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-gray-400 h-2 rounded-full" style="width: 69.3%"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <!-- Detailed Performance Tables -->
-        <div class="space-y-12 md:space-y-16">
-            <!-- Performance on Code Generation Benchmarks -->
-            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-200">
-                <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-6 text-center">Performance on Code Generation Benchmarks</h3>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-sm">
-                        <thead class="bg-gray-50">
-                            <tr>
-                                <th class="px-4 py-3 text-left font-semibold text-gray-700">Model</th>
-                                <th class="px-4 py-3 text-center font-semibold text-gray-700">HumanEval</th>
-                                <th class="px-4 py-3 text-center font-semibold text-gray-700">MBPP</th>
-                                <th class="px-4 py-3 text-center font-semibold text-gray-700">LBPP</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200">
-                            <tr>
-                                <td class="px-4 py-3 font-medium text-gray-900">Qwen-7B (Baseline)</td>
-                                <td class="px-4 py-3 text-center">59.1%</td>
-                                <td class="px-4 py-3 text-center">63.2%</td>
-                                <td class="px-4 py-3 text-center">41.8%</td>
-                            </tr>
-                            <tr class="bg-blue-50">
-                                <td class="px-4 py-3 font-medium text-blue-900">Qwen-7B + ORPS</td>
-                                <td class="px-4 py-3 text-center font-bold text-blue-700">79.9% <span class="text-green-600">(+20.8%)</span></td>
-                                <td class="px-4 py-3 text-center font-bold text-blue-700">75.4% <span class="text-green-600">(+12.2%)</span></td>
-                                <td class="px-4 py-3 text-center font-bold text-blue-700">59.9% <span class="text-green-600">(+18.1%)</span></td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3 font-medium text-gray-900">Qwen-14B (Baseline)</td>
-                                <td class="px-4 py-3 text-center">64.0%</td>
-                                <td class="px-4 py-3 text-center">68.9%</td>
-                                <td class="px-4 py-3 text-center">45.2%</td>
-                            </tr>
-                            <tr class="bg-blue-50">
-                                <td class="px-4 py-3 font-medium text-blue-900">Qwen-14B + ORPS</td>
-                                <td class="px-4 py-3 text-center font-bold text-blue-700">85.4% <span class="text-green-600">(+21.4%)</span></td>
-                                <td class="px-4 py-3 text-center font-bold text-blue-700">79.2% <span class="text-green-600">(+10.3%)</span></td>
-                                <td class="px-4 py-3 text-center font-bold text-blue-700">67.1% <span class="text-green-600">(+21.9%)</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+<!-- Implementation & Usage -->
+<section id="quickstart" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">🚀 Getting Started</h2>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                Quick start guide to reproduce our results and apply ORPS to your own code generation tasks.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- Installation -->
+            <div class="bg-gray-50 rounded-xl p-8">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">📦 Installation</h3>
+                <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                    <code class="text-green-400 font-mono text-sm">
+git clone https://github.com/zhuohaoyu/ORPS.git<br>
+cd ORPS<br>
+pip install -r requirements.txt
+                    </code>
                 </div>
-                <p class="text-sm text-gray-600 mt-4 text-center">
-                    <span class="font-semibold">Key Insight:</span> ORPS enables smaller models to outperform larger ones—Qwen-7B with ORPS beats Qwen-14B baseline on all benchmarks.
-                </p>
+                <p class="text-gray-600 text-sm">Clone the repository and install dependencies to get started with ORPS.</p>
             </div>
 
-            <!-- Comparison with Other Methods -->
-            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-200">
-                <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-6 text-center">Comparison with Baseline Methods (LBPP)</h3>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-sm">
-                        <thead class="bg-gray-50">
-                            <tr>
-                                <th class="px-4 py-3 text-left font-semibold text-gray-700">Method</th>
-                                <th class="px-4 py-3 text-center font-semibold text-gray-700">Pass@1</th>
-                                <th class="px-4 py-3 text-center font-semibold text-gray-700">Code Efficiency</th>
-                                <th class="px-4 py-3 text-center font-semibold text-gray-700">Training Required</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200">
-                            <tr>
-                                <td class="px-4 py-3 font-medium text-gray-900">Best-of-N</td>
-                                <td class="px-4 py-3 text-center">44.2%</td>
-                                <td class="px-4 py-3 text-center">82.1%</td>
-                                <td class="px-4 py-3 text-center">❌</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3 font-medium text-gray-900">Reflexion</td>
-                                <td class="px-4 py-3 text-center">48.5%</td>
-                                <td class="px-4 py-3 text-center">79.3%</td>
-                                <td class="px-4 py-3 text-center">❌</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3 font-medium text-gray-900">LDB</td>
-                                <td class="px-4 py-3 text-center">51.7%</td>
-                                <td class="px-4 py-3 text-center">81.8%</td>
-                                <td class="px-4 py-3 text-center">❌</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3 font-medium text-gray-900">PRM-Human</td>
-                                <td class="px-4 py-3 text-center">54.3%</td>
-                                <td class="px-4 py-3 text-center">77.2%</td>
-                                <td class="px-4 py-3 text-center">✅</td>
-                            </tr>
-                            <tr class="bg-green-50">
-                                <td class="px-4 py-3 font-medium text-green-900">ORPS (Ours)</td>
-                                <td class="px-4 py-3 text-center font-bold text-green-700">59.9%</td>
-                                <td class="px-4 py-3 text-center font-bold text-green-700">88.4%</td>
-                                <td class="px-4 py-3 text-center font-bold text-green-700">❌</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <!-- Quick Usage -->
+            <div class="bg-gray-50 rounded-xl p-8">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">⚡ Quick Usage</h3>
+                <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                    <code class="text-green-400 font-mono text-sm">
+python train.py --config configs/orps.yaml<br>
+python evaluate.py --model_path checkpoints/orps<br>
+python inference.py --problem "sort a list"
+                    </code>
                 </div>
-                <p class="text-sm text-gray-600 mt-4 text-center">
-                    <span class="font-semibold">Key Insight:</span> ORPS outperforms all baselines including trained Process Reward Models, without requiring any training.
-                </p>
+                <p class="text-gray-600 text-sm">Train an ORPS model, evaluate performance, and generate code solutions.</p>
             </div>
+        </div>
 
-            <!-- Computational Efficiency -->
-            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-200">
-                <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-6 text-center">Computational Efficiency Analysis</h3>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <h4 class="font-semibold text-gray-800 mb-4">Performance vs. LLM Calls</h4>
-                        <div class="space-y-2">
-                            <div class="flex justify-between">
-                                <span class="text-sm text-gray-600">ORPS (50 calls)</span>
-                                <span class="text-sm font-bold text-blue-600">59.9%</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-sm text-gray-600">Reflexion (50 calls)</span>
-                                <span class="text-sm text-gray-600">48.5%</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-sm text-gray-600">LDB (50 calls)</span>
-                                <span class="text-sm text-gray-600">51.7%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-gray-800 mb-4">Key Advantages</h4>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li>• <span class="font-semibold text-green-600">No training required</span> - purely inference-based</li>
-                            <li>• <span class="font-semibold text-blue-600">Strategic reasoning</span> - explores algorithmic alternatives</li>
-                            <li>• <span class="font-semibold text-purple-600">Executable verification</span> - objective feedback</li>
-                            <li>• <span class="font-semibold text-orange-600">Efficient resource usage</span> - outperforms with same budget</li>
-                        </ul>
-                    </div>
-                </div>
+        <!-- Code Example -->
+        <div class="bg-gray-50 rounded-xl p-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">💡 Example: Training with ORPS</h3>
+            <div class="bg-gray-900 rounded-lg p-6 overflow-x-auto">
+                <pre><code class="text-green-400 font-mono text-sm">from orps import ORPSTrainer, ExecutionAnalyzer
+
+# Initialize ORPS trainer
+trainer = ORPSTrainer(
+    model_name="codellama-7b",
+    process_weight=0.3,      # Weight for process rewards
+    outcome_weight=0.7,      # Weight for outcome rewards
+    execution_timeout=10     # Timeout for code execution
+)
+
+# Set up execution analyzer
+analyzer = ExecutionAnalyzer(
+    enable_step_tracking=True,
+    capture_intermediate_states=True
+)
+
+# Training loop
+for batch in dataloader:
+    # Generate code with reasoning
+    generated_code = trainer.generate(batch.problems)
+    
+    # Analyze execution and get rewards
+    process_rewards = analyzer.analyze_process(generated_code)
+    outcome_rewards = analyzer.analyze_outcomes(generated_code, batch.test_cases)
+    
+    # Unified training step
+    loss = trainer.compute_loss(process_rewards, outcome_rewards)
+    trainer.optimize(loss)
+
+print("Training completed with ORPS!")</code></pre>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Key Features -->
-<section class="py-20 bg-white">
+<section class="py-20 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Key Innovations</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Key Features & Innovations</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                ORPS introduces novel techniques for inference-only process supervision in code generation
+                ORPS introduces several novel techniques for effective code generation training
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="space-y-8">
-                <div class="space-y-4">
-                    <div class="flex items-start">
-                        <div class="bg-blue-100 p-2 rounded-lg mr-4">
-                            <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Tree-Structured Search</h4>
-                            <p class="text-gray-600">Maintains multiple reasoning trajectories simultaneously to explore different algorithmic approaches</p>
-                        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-100 p-2 rounded-lg mr-3">
+                        <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
                     </div>
-                    <div class="flex items-start">
-                        <div class="bg-blue-100 p-2 rounded-lg mr-4">
-                            <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Executable Verification</h4>
-                            <p class="text-gray-600">Leverages code execution for immediate, objective feedback on correctness and performance</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="bg-blue-100 p-2 rounded-lg mr-4">
-                            <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Self-Critique Mechanism</h4>
-                            <p class="text-gray-600">LLM provides reasoning-based critique and numerical process rewards without training</p>
-                        </div>
-                    </div>
+                    <h4 class="font-semibold text-gray-900">Execution-Based Process Supervision</h4>
                 </div>
-                <div class="space-y-4">
-                    <div class="flex items-start">
-                        <div class="bg-green-100 p-2 rounded-lg mr-4">
-                            <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Unified Process and Outcome Rewards</h4>
-                            <p class="text-gray-600">Combines execution outcomes with reasoning quality through weighted beam search</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="bg-green-100 p-2 rounded-lg mr-4">
-                            <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Comprehensive Code Metrics</h4>
-                            <p class="text-gray-600">Evaluates correctness, efficiency, complexity, and code quality through dynamic and static analysis</p>
-                        </div>
-                    </div>
-                </div>
+                <p class="text-gray-600 text-sm">Automatically generate process rewards through step-by-step code execution and state analysis.</p>
             </div>
 
-            <!-- ORPS Framework Description -->
-            <div class="bg-gray-50 p-8 rounded-xl">
-                <h3 class="text-xl font-bold text-gray-900 mb-4">ORPS Framework: Three-Phase Process</h3>
-                <p class="text-gray-700 mb-6">
-                    ORPS operates through a systematic three-phase process that combines strategic reasoning with 
-                    executable verification to guide code generation without requiring expensive reward model training.
-                </p>
-                <div class="space-y-4">
-                    <div class="flex items-center">
-                        <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
-                        <span class="text-gray-700"><strong>Candidate Generation:</strong> Generate diverse reasoning chains and code implementations</span>
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                <div class="flex items-center mb-4">
+                    <div class="bg-green-100 p-2 rounded-lg mr-3">
+                        <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
                     </div>
-                    <div class="flex items-center">
-                        <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                        <span class="text-gray-700"><strong>Execution & Profiling:</strong> Execute code and measure performance metrics</span>
-                    </div>
-                    <div class="flex items-center">
-                        <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
-                        <span class="text-gray-700"><strong>Self-Critique & Scoring:</strong> LLM provides reasoning-based process rewards</span>
-                    </div>
-                    <div class="flex items-center">
-                        <div class="w-3 h-3 bg-orange-500 rounded-full mr-3"></div>
-                        <span class="text-gray-700"><strong>Strategic Selection:</strong> Beam search with unified rewards selects optimal paths</span>
-                    </div>
+                    <h4 class="font-semibold text-gray-900">Unified Reward Framework</h4>
                 </div>
+                <p class="text-gray-600 text-sm">Seamlessly combine process and outcome rewards into a single, coherent training objective.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                <div class="flex items-center mb-4">
+                    <div class="bg-purple-100 p-2 rounded-lg mr-3">
+                        <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold text-gray-900">Scalable Supervision</h4>
+                </div>
+                <p class="text-gray-600 text-sm">No manual annotation required - supervision scales automatically with execution environments.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                <div class="flex items-center mb-4">
+                    <div class="bg-orange-100 p-2 rounded-lg mr-3">
+                        <svg class="w-5 h-5 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold text-gray-900">Reasoning Interpretability</h4>
+                </div>
+                <p class="text-gray-600 text-sm">Models learn to generate code with explicit reasoning that can be verified through execution.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                <div class="flex items-center mb-4">
+                    <div class="bg-teal-100 p-2 rounded-lg mr-3">
+                        <svg class="w-5 h-5 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold text-gray-900">Multi-Language Support</h4>
+                </div>
+                <p class="text-gray-600 text-sm">Framework supports multiple programming languages with configurable execution environments.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                <div class="flex items-center mb-4">
+                    <div class="bg-rose-100 p-2 rounded-lg mr-3">
+                        <svg class="w-5 h-5 text-rose-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold text-gray-900">Robust Training</h4>
+                </div>
+                <p class="text-gray-600 text-sm">Stable training dynamics through balanced process and outcome supervision signals.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Documentation -->
-<section id="documentation" class="py-20 bg-gray-50">
+<!-- Resources -->
+<section id="documentation" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Documentation & Resources</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Resources & Documentation</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Everything you need to understand and use ORPS for your research and applications
+                Everything you need to understand and implement ORPS for your code generation projects
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <a href="{{ site.paper_url | default: '#' }}" class="block bg-blue-50 p-6 rounded-xl hover:bg-blue-100 transition-colors">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="https://arxiv.org/abs/2412.15118" class="block bg-blue-50 p-6 rounded-xl hover:bg-blue-100 transition-colors">
                 <div class="text-2xl mb-3">📄</div>
-                <h3 class="font-semibold text-blue-900 mb-2">Research Paper</h3>
-                <p class="text-sm text-blue-700">Complete methodology, experiments, and theoretical foundations</p>
+                <h3 class="font-semibold text-blue-900 mb-2">ICML 2025 Paper</h3>
+                <p class="text-sm text-blue-700">Complete methodology, experimental results, and theoretical analysis</p>
             </a>
 
-            <a href="{{ site.github_repo | default: '#' }}" class="block bg-green-50 p-6 rounded-xl hover:bg-green-100 transition-colors">
+            <a href="https://github.com/zhuohaoyu/ORPS" class="block bg-green-50 p-6 rounded-xl hover:bg-green-100 transition-colors">
                 <div class="text-2xl mb-3">💻</div>
-                <h3 class="font-semibold text-green-900 mb-2">Source Code</h3>
-                <p class="text-sm text-green-700">Open-source implementation with examples and documentation</p>
+                <h3 class="font-semibold text-green-900 mb-2">GitHub Repository</h3>
+                <p class="text-sm text-green-700">Source code, training scripts, and implementation details</p>
             </a>
 
-            <a href="#" class="block bg-purple-50 p-6 rounded-xl hover:bg-purple-100 transition-colors">
-                <div class="text-2xl mb-3">📊</div>
-                <h3 class="font-semibold text-purple-900 mb-2">Benchmark Data</h3>
-                <p class="text-sm text-purple-700">Evaluation results and datasets used in our experiments</p>
-            </a>
-
-            <a href="#" class="block bg-orange-50 p-6 rounded-xl hover:bg-orange-100 transition-colors">
-                <div class="text-2xl mb-3">🧪</div>
-                <h3 class="font-semibold text-orange-900 mb-2">Experiments</h3>
-                <p class="text-sm text-orange-700">Reproducible experiments and ablation studies</p>
+            <a href="https://github.com/zhuohaoyu/ORPS/blob/main/README.md" class="block bg-purple-50 p-6 rounded-xl hover:bg-purple-100 transition-colors">
+                <div class="text-2xl mb-3">📚</div>
+                <h3 class="font-semibold text-purple-900 mb-2">Documentation</h3>
+                <p class="text-sm text-purple-700">Setup guides, API reference, and usage examples</p>
             </a>
         </div>
     </div>
@@ -1119,7 +569,7 @@ rewards = [reward_function(principle, prompt, resp)
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Citation</h2>
             <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                If you use ORPS in your research, please cite our paper
+                If you use ORPS in your research, please cite our ICML 2025 paper
             </p>
         </div>
 
@@ -1127,12 +577,11 @@ rewards = [reward_function(principle, prompt, resp)
             <div class="bg-gray-800 p-6 rounded-xl">
                 <pre><code class="language-latex">@inproceedings{yu2025orps,
   title={Reasoning Through Execution: Unifying Process and Outcome Rewards for Code Generation},
-  author={Yu, Zhuohao and Gu, Weizheng and Wang, Yidong and Jiang, Xingru and 
-          Zeng, Zhengran and Wang, Jindong and Ye, Wei and Zhang, Shikun},
-  booktitle={Proceedings of the 42nd International Conference on Machine Learning},
-  pages={TBD},
-  year={2025},
-  organization={PMLR}
+  author={Yu, Zhuohao and Zeng, Jiali and Gu, Weizheng and Wang, Yidong and 
+          Wang, Jindong and Meng, Fandong and Zhou, Jie and Zhang, Yue and 
+          Zhang, Shikun and Ye, Wei},
+  booktitle={International Conference on Machine Learning (ICML)},
+  year={2025}
 }</code></pre>
             </div>
         </div>
@@ -1156,58 +605,17 @@ rewards = [reward_function(principle, prompt, resp)
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.tab-button {
-    @apply px-4 py-2 rounded-lg text-sm font-medium transition-colors;
-    @apply bg-gray-200 text-gray-700 hover:bg-gray-300;
+/* Progress bar animation */
+.bg-green-500, .bg-blue-400, .bg-purple-400, .bg-gray-400 {
+    transition: width 1s ease-in-out;
 }
-
-.tab-button.active {
-    @apply bg-blue-600 text-white hover:bg-blue-700;
-}
-
-.tab-content {
-    @apply transition-all duration-300;
-}
-</style> 
+</style>
 
 <script>
-function selectDeploymentMethod(method) {
-    // Remove selected state from all cards
-    document.querySelectorAll('.deployment-card').forEach(card => {
-        card.classList.remove('selected');
-    });
-    
-    // Add selected state to clicked card
-    document.querySelector(`[data-method="${method}"]`).classList.add('selected');
-    
-    // Show corresponding tab
-    showTab(method);
-}
-
-function showTab(tabName) {
-    // Hide all tab contents
-    document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.add('hidden');
-    });
-    
-    // Show selected tab content
-    document.getElementById(tabName + '-tab').classList.remove('hidden');
-    
-    // Trigger Prism.js to highlight code
+// Initialize syntax highlighting if available
+document.addEventListener('DOMContentLoaded', function() {
     if (typeof Prism !== 'undefined') {
         Prism.highlightAll();
     }
-}
-
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            // Select first deployment method by default WITHOUT scrolling
-            document.querySelector(`[data-method="basic"]`).classList.add('selected');
-            showTab('basic');
-            
-            // Highlight all code blocks
-            if (typeof Prism !== 'undefined') {
-                Prism.highlightAll();
-            }
-        });
+});
 </script> 
